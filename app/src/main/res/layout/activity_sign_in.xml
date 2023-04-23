@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    
+    <ImageView
+        android:layout_width=""
+        android:layout_height=""
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Datos del usuario"
+        android:textSize="45sp"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:layout_gravity="center"/>
+    <EditText
+        android:id="@+id/et_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"
+        android:textSize="25sp"
+        android:inputType="text"
+        android:ems="10"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:layout_gravity="center"/>
+    <EditText
+        android:id="@+id/et_apellido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Apellido"
+        android:textSize="25sp"
+        android:inputType="text"
+        android:ems="10"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:id="@+id/et_edad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"
+        android:textSize="25sp"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:layout_gravity="center"/>
+    <Button
+        android:id="@+id/bt_guardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:textSize="25sp"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:textSize="20sp"
+        android:id="@+id/listViewText"
+        android:textAlignment="center"/>
+</LinearLayout>
