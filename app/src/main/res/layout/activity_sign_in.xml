@@ -1,73 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
-    
-    <ImageView
-        android:layout_width=""
-        android:layout_height=""
+    tools:context=".signInActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Datos del usuario"
-        android:textSize="45sp"
-        android:layout_margin="20dp"
-        android:textColor="@color/black"
-        android:layout_gravity="center"/>
-    <EditText
-        android:id="@+id/et_nombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Nombre"
-        android:textSize="25sp"
-        android:inputType="text"
-        android:ems="10"
-        android:layout_margin="20dp"
-        android:textColor="@color/black"
-        android:layout_gravity="center"/>
-    <EditText
-        android:id="@+id/et_apellido"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Apellido"
-        android:textSize="25sp"
-        android:inputType="text"
-        android:ems="10"
-        android:layout_margin="20dp"
-        android:textColor="@color/black"
-        android:layout_gravity="center"/>
+        android:layout_marginTop="64dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBaseline_toTopOf="parent"
+        tools:ignore="UseCompoundDrawables"/>
 
-    <EditText
-        android:id="@+id/et_edad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Nombre"
-        android:textSize="25sp"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:layout_margin="20dp"
-        android:textColor="@color/black"
-        android:layout_gravity="center"/>
-    <Button
-        android:id="@+id/bt_guardar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nombre"
-        android:textSize="25sp"
-        android:layout_margin="20dp"
-        android:textColor="@color/black"
-        android:layout_gravity="center"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:layout_margin="20dp"
-        android:textSize="20sp"
-        android:id="@+id/listViewText"
-        android:textAlignment="center"/>
-</LinearLayout>
+        <ImageView
+            android:id="@+id/ImageFirebase"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="150dp"
+            android:contentDescription="@string/all"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_logo"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:id="@+id/fireBaseLogin"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="150dp"
+            android:text="@string/title_active_login"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ImageFirebase" />
+
+        <EditText
+            android:id="@+id/et_Email"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="150dp"
+            android:inputType="textEmailAddress"
+            android:hint="@string/email"
+            android:gravity="center_horizontal"
+            android:drawableStart="@drawable/ic_email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fireBaseLogin" />
+
+        <EditText
+            android:id="@+id/et_Password"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="150dp"
+            android:inputType="textPassword"
+            android:hint="@string/password"
+            android:gravity="center_horizontal"
+            android:drawableStart="@drawable/ic_lock"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_Email" />
+
+        <TextView
+            android:id="@+id/tv_olvidasteContraseña"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="80dp"
+            android:text="@string/forget_password"
+
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_Password" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="150dp"
+            android:text="@string/login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_olvidasteContraseña" />
+
+        <TextView
+            android:id="@+id/tv_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="50dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="@string/text_signup"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+        <Button
+            android:id="@+id/btn_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:background="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/signup"
+            android:textColor="@color/orange"
+            app:layout_constraintStart_toEndOf="@+id/tv_signup"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
