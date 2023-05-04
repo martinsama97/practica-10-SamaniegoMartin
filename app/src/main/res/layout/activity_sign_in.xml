@@ -8,18 +8,19 @@
 
 
     <ImageView
-            android:id="@+id/ImageFirebase"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="150dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="150dp"
-            android:contentDescription="@string/all"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_logo"
-            tools:ignore="VectorDrawableCompat" />
+        android:id="@+id/ImageFirebase"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="150dp"
+        android:contentDescription="@string/all"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logo"
+        tools:ignore="VectorDrawableCompat" />
 
     <TextView
             android:id="@+id/fireBaseLogin"
@@ -34,6 +35,16 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ImageFirebase" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:text="Usuario: martin@prueba.com, contraseña: samaniego"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
             android:id="@+id/etEmail"
@@ -80,7 +91,7 @@
             android:id="@+id/btnLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="150dp"
+            android:layout_marginStart="0dp"
             android:layout_marginTop="50dp"
             android:layout_marginEnd="150dp"
             android:text="@string/login"
@@ -92,9 +103,11 @@
         android:id="@+id/sign_in_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="150dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="150dp"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/btnLogin"
         app:layout_constraintTop_toBottomOf="@id/tv_olvidasteContraseña" />
 
